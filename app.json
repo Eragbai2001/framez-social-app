@@ -1,8 +1,9 @@
 {
   "expo": {
-    "name": "my-expo-app",
-    "slug": "my-expo-app",
+    "name": "Framez",
+    "slug": "framez",
     "version": "1.0.0",
+    "scheme": "framez",
 
     "web": {
       "favicon": "./assets/favicon.png"
