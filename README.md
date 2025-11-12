@@ -388,14 +388,20 @@ This project is private and proprietary.
 
 ## 👥 Author
 
-Joshua - Framez App
+Joshua (Eragbai2001)
 
 ## 🔗 Links
 
+- **GitHub Repository**: https://github.com/Eragbai2001/framez-social-app
 - [Expo Documentation](https://docs.expo.dev/)
 - [Supabase Documentation](https://supabase.com/docs)
 - [NativeWind Documentation](https://www.nativewind.dev/)
 - [React Native Documentation](https://reactnative.dev/)
+
+## 📱 Live Demo
+
+- **Appetize.io Link**: [Coming soon - Building now...]
+- **Demo Video**: [Coming soon - Recording after build...]
 
 ---
 

@@ -6,14 +6,14 @@ export function WelcomeScreen({ onGetStarted }: { onGetStarted?: () => void }) {
     <View className="flex-1 bg-white">
       {/* Header with logo */}
       <View className="mt-16 items-center">
-        {/* Logo */}
+        {/* Logo - Using app icon */}
         <Image
-          source={require('../assets/logo.png')}
-          className="mb-2 h-16 w-16"
+          source={require('../assets/icon.png')}
+          className="mb-2 h-24 w-24 rounded-3xl"
           resizeMode="contain"
         />
 
-        <Text className="mt-2 text-2xl font-bold text-gray-900">Framez</Text>
+        <Text className="mt-2 text-3xl font-bold text-gray-900">Framez</Text>
       </View>
 
       {/* Illustration with Landing image */}

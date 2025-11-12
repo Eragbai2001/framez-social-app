@@ -82,15 +82,6 @@ export function FeedScreen({ user }: FeedScreenProps) {
     return null;
   }
 
-  // Mock stories data
-  const stories = [
-    { id: 'yours', name: 'Your Story', hasStory: true, isYours: true },
-    { id: '1', name: 'lanasmith', hasStory: true },
-    { id: '2', name: 'Anne', hasStory: true },
-    { id: '3', name: 'zackpaul', hasStory: true },
-    { id: '4', name: 'karenn', hasStory: true },
-  ];
-
   return (
     <View className="flex-1 bg-gray-50">
       {/* Header */}
@@ -129,36 +120,117 @@ export function FeedScreen({ user }: FeedScreenProps) {
         {/* Stories Section */}
         <View className="bg-white px-4 py-4">
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            <View className="flex-row gap-7">
-              {stories.map((story) => (
-                <TouchableOpacity key={story.id} className="items-center">
-                  <View
-                    className={`h-16 w-16 items-center justify-center rounded-full ${
-                      story.isYours ? 'bg-gray-200' : ''
-                    }`}
-                    style={
-                      !story.isYours
-                        ? {
-                            borderWidth: 2,
-                            borderColor: '#2FA6A7',
-                          }
-                        : undefined
-                    }>
-                    {story.isYours && (
-                      <View className="absolute bottom-0 right-0 z-10 h-5 w-5 items-center justify-center rounded-full bg-yellow-400">
-                        <Text className="text-xs font-bold">+</Text>
-                      </View>
-                    )}
-                    <View className="h-14 w-14 items-center justify-center rounded-full bg-gray-300" />
+            <View className="flex-row gap-4">
+              {/* Your Story - Add new */}
+              <TouchableOpacity className="items-center">
+                <View className="h-16 w-16 items-center justify-center rounded-full bg-gray-200">
+                  <View className="absolute bottom-0 right-0 z-10 h-5 w-5 items-center justify-center rounded-full bg-[#F8D966]">
+                    <Text className="text-xs font-bold">+</Text>
                   </View>
-                  <Text
-                    className="mt-1 text-xs"
-                    style={{ fontFamily: 'Poppins_400Regular' }}
-                    numberOfLines={1}>
-                    {story.name}
-                  </Text>
-                </TouchableOpacity>
-              ))}
+                  <View className="h-14 w-14 items-center justify-center rounded-full bg-gray-300" />
+                </View>
+                <Text className="mt-1 text-xs" style={{ fontFamily: 'Poppins_400Regular' }} numberOfLines={1}>
+                  Your Story
+                </Text>
+              </TouchableOpacity>
+
+              {/* Story 1 */}
+              <TouchableOpacity className="items-center">
+                <View className="h-16 w-16 overflow-hidden rounded-full" style={{ borderWidth: 2, borderColor: '#2FA6A7' }}>
+                  <Image
+                    source={require('../assets/download.jpg')}
+                    className="h-full w-full"
+                    resizeMode="cover"
+                  />
+                </View>
+                <Text className="mt-1 text-xs" style={{ fontFamily: 'Poppins_400Regular' }} numberOfLines={1}>
+                  lanasmith
+                </Text>
+              </TouchableOpacity>
+
+              {/* Story 2 */}
+              <TouchableOpacity className="items-center">
+                <View className="h-16 w-16 overflow-hidden rounded-full" style={{ borderWidth: 2, borderColor: '#2FA6A7' }}>
+                  <Image
+                    source={require('../assets/download (1).jpg')}
+                    className="h-full w-full"
+                    resizeMode="cover"
+                  />
+                </View>
+                <Text className="mt-1 text-xs" style={{ fontFamily: 'Poppins_400Regular' }} numberOfLines={1}>
+                  Anne
+                </Text>
+              </TouchableOpacity>
+
+              {/* Story 3 */}
+              <TouchableOpacity className="items-center">
+                <View className="h-16 w-16 overflow-hidden rounded-full" style={{ borderWidth: 2, borderColor: '#2FA6A7' }}>
+                  <Image
+                    source={require('../assets/download (2).jpg')}
+                    className="h-full w-full"
+                    resizeMode="cover"
+                  />
+                </View>
+                <Text className="mt-1 text-xs" style={{ fontFamily: 'Poppins_400Regular' }} numberOfLines={1}>
+                  zackpaul
+                </Text>
+              </TouchableOpacity>
+
+              {/* Story 4 */}
+              <TouchableOpacity className="items-center">
+                <View className="h-16 w-16 overflow-hidden rounded-full" style={{ borderWidth: 2, borderColor: '#2FA6A7' }}>
+                  <Image
+                    source={require('../assets/download (3).jpg')}
+                    className="h-full w-full"
+                    resizeMode="cover"
+                  />
+                </View>
+                <Text className="mt-1 text-xs" style={{ fontFamily: 'Poppins_400Regular' }} numberOfLines={1}>
+                  karenn
+                </Text>
+              </TouchableOpacity>
+
+              {/* Story 5 */}
+              <TouchableOpacity className="items-center">
+                <View className="h-16 w-16 overflow-hidden rounded-full" style={{ borderWidth: 2, borderColor: '#2FA6A7' }}>
+                  <Image
+                    source={require('../assets/download (4).jpg')}
+                    className="h-full w-full"
+                    resizeMode="cover"
+                  />
+                </View>
+                <Text className="mt-1 text-xs" style={{ fontFamily: 'Poppins_400Regular' }} numberOfLines={1}>
+                  mikeross
+                </Text>
+              </TouchableOpacity>
+
+              {/* Story 6 */}
+              <TouchableOpacity className="items-center">
+                <View className="h-16 w-16 overflow-hidden rounded-full" style={{ borderWidth: 2, borderColor: '#2FA6A7' }}>
+                  <Image
+                    source={require('../assets/download (5).jpg')}
+                    className="h-full w-full"
+                    resizeMode="cover"
+                  />
+                </View>
+                <Text className="mt-1 text-xs" style={{ fontFamily: 'Poppins_400Regular' }} numberOfLines={1}>
+                  sarah_j
+                </Text>
+              </TouchableOpacity>
+
+              {/* Story 7 */}
+              <TouchableOpacity className="items-center">
+                <View className="h-16 w-16 overflow-hidden rounded-full" style={{ borderWidth: 2, borderColor: '#2FA6A7' }}>
+                  <Image
+                    source={require('../assets/download (6).jpg')}
+                    className="h-full w-full"
+                    resizeMode="cover"
+                  />
+                </View>
+                <Text className="mt-1 text-xs" style={{ fontFamily: 'Poppins_400Regular' }} numberOfLines={1}>
+                  alex_m
+                </Text>
+              </TouchableOpacity>
             </View>
           </ScrollView>
         </View>

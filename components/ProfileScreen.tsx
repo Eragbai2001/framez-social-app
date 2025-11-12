@@ -169,6 +169,18 @@ export function ProfileScreen({ user, onBack }: ProfileScreenProps) {
               {userEmail}
             </Text>
           </View>
+
+          {/* Logout Button */}
+          <TouchableOpacity
+            onPress={async () => {
+              await supabase.auth.signOut();
+            }}
+            className="mt-4 rounded-xl bg-red-500 px-8 py-3"
+            activeOpacity={0.8}>
+            <Text className="font-semibold text-white" style={{ fontFamily: 'Poppins_600SemiBold' }}>
+              Logout
+            </Text>
+          </TouchableOpacity>
         </View>
 
         {/* Stats */}
@@ -204,6 +216,7 @@ export function ProfileScreen({ user, onBack }: ProfileScreenProps) {
             </Text>
           </View>
         </View>
+
 
         {/* Tabs */}
         <View className="mb-4 flex-row border-b border-gray-200">
